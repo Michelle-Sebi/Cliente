@@ -29,8 +29,19 @@
 - async con : try/catch, getState
 - 2 asyncthunks y sus extraReducers donde se añaden objetos al array
 
-[ceedGPT](EJERCICIOS/examenes/extraordinaria/examen-extraordinaria/chat/src)
+[ceedGPT](EJERCICIOS/examenes/extraordinaria/chat/src)
 
 
 ## Redux
-### CEED
+### CEED SINCRONO
+<u>**PICKER**</u> *(React)* : input tipo rango
+[Picker](EJERCICIOS/ejerciciosRedux/ceed/sincrono/picker/src)
+
+<u>**GRADIENT**</u> *(React)* : cuadrados con color fondo gradual
+[Gradient](EJERCICIOS/ejerciciosRedux/ceed/sincrono/gradient2/src)
+
+<u>**SUPERPICKER**</u> *(React)* : mix
+[superPicker](EJERCICIOS/ejerciciosRedux/ceed/sincrono/superPicker/src/)
+
+<u>**SUPERPICKER**</u> *(Redux)* : pasar valor input a numerico
+[superPicker](EJERCICIOS/ejerciciosRedux/ceed/sincrono/superPickerRedux/src) 
