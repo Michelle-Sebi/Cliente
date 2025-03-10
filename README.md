@@ -1,1 +1,5 @@
 # Cliente
+
+## Ejercicios
+* noseque
+* nosecual
