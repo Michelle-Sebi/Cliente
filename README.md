@@ -45,3 +45,6 @@
 
 <u>**SUPERPICKER**</u> *(Redux)* : pasar valor input a numerico
 [superPicker](EJERCICIOS/ejerciciosRedux/ceed/sincrono/superPickerRedux/src) 
+
+<u>**EXTRACUADRADOS**</u> *(Redux)* : SWITCH EN REDUCER
+[superPicker](EJERCICIOS/ejerciciosRedux/ceed/sincrono/ejerExtraCuadrados/extraCuadradosRedux/src) 
