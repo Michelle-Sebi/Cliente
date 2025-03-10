@@ -30,3 +30,7 @@
 - 2 asyncthunks y sus extraReducers donde se añaden objetos al array
 
 [ceedGPT](EJERCICIOS/examenes/extraordinaria/examen-extraordinaria/chat/src)
+
+
+## Redux
+### CEED
