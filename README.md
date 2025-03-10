@@ -56,7 +56,7 @@
 - loading 
 - async con parametros
   
-[Contador](EJERCICIOS/ejerciciosRedux/ceed/asincrono/Contador/src) 
+[Contador](EJERCICIOS/ejerciciosRedux/ceed/asincrono/Contador2/src) 
 
 ### NO CEED SINCRONO
 
