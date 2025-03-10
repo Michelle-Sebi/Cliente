@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Validación de Emails</title>
+</head>
+<body>
+    <h2>Formulario de Validación de Emails</h2>
+    <form id="form">
+        <label for="email1">Email 1:</label>
+        <input type="email" id="email1" name="email1" required>
+        <span id="error1" style="color:red"></span>
+        <br><br>
+
+        <label for="email2">Confirmar Email 2:</label>
+        <input type="email" id="email2" name="email2" required>
+        <span id="error2" style="color:red"></span>
+        <br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+        const form = document.getElementById("form");
+        const listaServidores = ["terra.es", "myspace.com", "arrakis.es", "tuenti.es"];
+        
+        form.addEventListener("submit", function(evento) {
+            evento.preventDefault();
+            
+            // Obtenemos los valores de los emails
+            const email1 = document.getElementById("email1").value;
+            const email2 = document.getElementById("email2").value;
+
+            // Seleccionamos los elementos donde se mostrarán los errores
+            const error1 = document.getElementById("error1");
+            const error2 = document.getElementById("error2");
+
+            // Expresión regular para validar el formato del email
+            const pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            
+            // Limpiar mensajes de error previos
+            error1.textContent = "";
+            error2.textContent = "";
+
+            // Validar el formato del primer email
+            if (!pattern.test(email1)) {
+                error1.textContent = "Correo no válido";
+                return;
+            }
+
+            // Validar el formato del segundo email
+            if (!pattern.test(email2)) {
+                error2.textContent = "Correo no válido";
+                return;
+            }
+
+            // Comprobar si el servidor de email1 es válido
+            const servidor1 = email1.split("@")[1];
+            if (!listaServidores.includes(servidor1)) {
+                error1.textContent = "Servidor de email1 no válido";
+                return;
+            }
+
+            // Comprobar si el servidor de email2 es válido
+            const servidor2 = email2.split("@")[1];
+            if (!listaServidores.includes(servidor2)) {
+                error2.textContent = "Servidor de email2 no válido";
+                return;
+            }
+
+            // Comprobar si los dos emails son iguales
+            if (email1 !== email2) {
+                error2.textContent = "Los correos no coinciden";
+                return;
+            }
+
+            alert("Formulario enviado con éxito");
+        });
+    </script>
+</body>
+</html>
+

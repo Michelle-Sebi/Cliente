@@ -1,0 +1,52 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+ </head>
+ <body>
+
+    <div>
+        <label for="pin">PIN (hasta 5 caracteres)</label>
+        <input type="text" name="pin" id="pin" required>
+        <div id="comprobacion"></div>
+    </div>
+
+    <script>
+        let pin = document.getElementById('pin');
+        let comprobacion = document.getElementById('comprobacion');
+        
+        async function comprobarPin(){
+            let valorPin = pin.value;
+            if(valorPin.length === 5 && /^[0-9]{5}$/.test(valorPin)){
+                
+                try{
+                    let respuesta = await fetch("https://validate-pin.fly.dev/ validate", {
+                        method: "POST",
+                        headers:{
+                            'Content-Type':'application/x-www-form-urlencoded'
+                        },
+                        body: valorPin
+                    });
+                    let respuestaTexto = await respuesta.text();
+                    console.log("Respuesta del servidor:", respuestaTexto);
+
+                    let result = JSON.parse(respuestaTexto);
+                    comprobacion.textContent = result.valid ? "PIN correcto":"PIN incorrecto"
+                }catch(error){
+                    comprobacion.textContent = `Error de formato: ${error.message}`;
+                } 
+            }else {
+                comprobacion.textContent = "";  
+            }
+        }
+            
+        pin.addEventListener('input', comprobarPin);
+    </script>
+</body>
+</html>
+
+        
+
+    

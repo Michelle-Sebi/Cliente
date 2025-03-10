@@ -1,0 +1,2 @@
+import { resultado } from "./puntuaciones";
+

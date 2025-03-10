@@ -1,0 +1,22 @@
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+}
+.squares {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  
+  }
+  .square {
+    
+  width: 100px;
+  height: 100px;
+  flex-grow: 1;
+  }

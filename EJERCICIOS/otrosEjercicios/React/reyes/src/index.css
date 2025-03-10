@@ -1,0 +1,47 @@
+body, button{
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.contenedor{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+}
+
+h1{
+  margin-bottom: 2px;
+}
+
+.cadaRey{
+  border: 1px solid black;
+  padding-bottom: 30px;
+  border-radius: 12px;
+}
+
+img{
+  width: 100%;
+}
+
+.dieta{
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+.cajaVotacion{
+  background-color: gray;
+  display: inline-block;
+  border-radius: 4px;
+  margin-top: 12px;
+  text-align: center;
+}
+
+.votacion{
+  color: white;
+  font-size: 1.8em;
+  margin: 4px 0 7px;
+  font-weight: bold;
+}
+
+.rojo{
+  color: red;
+  font-weight: bold;
+}

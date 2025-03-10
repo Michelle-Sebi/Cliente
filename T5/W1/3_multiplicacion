@@ -1,0 +1,19 @@
+
+function lazyMultiply(...args){
+    let result;
+    if (args.length === 2){
+        result = args[0] * args[1];
+    }else if(args.length === 1){
+        result = (num2)=>num2*args[0];
+    } else {
+        throw new Error("Numero de parametros no permitido");
+        }
+    return result;
+}
+
+
+
+console.log(lazyMultiply(7,4)) // 28
+const perTwo = lazyMultiply(2)
+console.log(perTwo(3)) // 6
+console.log(lazyMultiply(5)(10)) // 50

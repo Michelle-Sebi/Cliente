@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación de email</title>
+</head>
+<body>
+ 
+    <form id="form" action="">
+        <label for="email1">Correo electrónico:</label>
+        <input type="text" id="email1" name="email1" placeholder="usuario@texto.com">
+              
+        <p id="error1" style="color: red;"></p>
+
+        <label for="email2">Confirmación correo electrónico:</label>
+        <input type="text" id="email2" name="email2" placeholder="usuario@texto.com">
+        <br>
+        <p id="error2" style="color: red;"></p>
+        <p id="error3" style="color: red;"></p>
+        <button type="submit">Enviar</button>
+        
+    </form>
+
+    <script>
+        const form = document.getElementById("form");
+        const listaServidores=["terra.es" , "myspace.com", "arrakis.es", "tuenti.es"];
+           
+        function validacionEmailYServidor(evento){
+            evento.preventDefault();
+            const email1 = document.getElementById("email1").value;
+            const email2 = document.getElementById("email2").value;
+            let error1 = document.getElementById("error1");
+            let error2 = document.getElementById("error2");
+            let pattern =  /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            error1.textContent = "";
+            error2.textContent = "";
+
+            if(!pattern.test(email1)){
+                error1.textContent = "Correo no válido";
+                return;
+            }
+            if(!pattern.test(email2)){
+                error2.textContent = "Correo no válido";
+               return;
+            }
+
+            let servidor1 = email1.split("@")[1];
+            let servidor2 = email2.split("@")[1];
+            if (!listaServidores.includes(servidor1)){
+                    error1.textContent = "Servidor no válido";
+            }
+            
+            if (!listaServidores.includes(servidor2)){
+                error2.textContent = "Servidor no válido";
+            }
+        }
+
+        function confirmacion(email, email2){
+            let error3 = document.getElementById("error3");
+            error3.textContent = "";
+
+            if(email1 !== email2){
+                error3.textContent = "Confirmación no válida";
+                
+            }
+        }
+        form.addEventListener("submit", validacionEmailYServidor);
+        form.addEventListener("submit", confirmacion);
+        
+    </script>
+
+</body>
+</html>

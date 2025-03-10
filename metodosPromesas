@@ -1,0 +1,26 @@
+Si quieres que las promesas se ejecuten 
+todas al mismo tiempo,
+
+pero manejar los resultados a medida que se completan, puedes usar Promise.allSettled() junto con for await...of.
+
+
+async function fetchData() {
+    const urls = [
+        "https://jsonplaceholder.typicode.com/todos/1",
+        "https://jsonplaceholder.typicode.com/todos/2",
+        "https://jsonplaceholder.typicode.com/todos/3"
+    ];
+
+    const promesas = urls.map(url => fetch(url).then(res => res.json()));
+
+    for await (const resultado of promesas) {
+        console.log("Respuesta recibida:", resultado);
+    }
+}
+
+fetchData();
+
+
+Se crean varias peticiones simultáneamente (map(url => fetch(url))).
+for await...of espera cada promesa conforme se resuelve, sin bloquear las demás.
+El orden de salida no está garantizado (aparece conforme cada fetch finaliza).

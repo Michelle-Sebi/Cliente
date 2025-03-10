@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donde esta el ratón</title>
+</head>
+<body>
+
+    <p id="raton">Mostrando donde esta el ratón</p>
+
+    <script>
+        const coorRaton = document.getElementById("raton");
+        document.addEventListener("mousemove",mostrarCoord);
+        
+        function mostrarCoord(evento){
+            let x =evento.clientX;
+            let y = evento.clientY;
+            let coor = "Coordenadas del ratón: ("+ x + "," + y + ")";
+            coorRaton.innerHTML = coor;
+        }
+
+        
+    </script>
+    
+</body>
+</html>

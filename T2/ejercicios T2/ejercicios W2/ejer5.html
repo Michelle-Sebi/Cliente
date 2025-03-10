@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de email</title>
+</head>
+<body>
+ 
+    <form id="form" action="">
+        <label for="email">Correo electrónico:</label>
+        <input type="text" id="email" name="email" placeholder="usuario@texto.com">
+        <br>
+        <input type="submit" value="Enviar">
+        <p id="error" style="color: red;"></p>
+    </form>
+
+    <script>
+        const form = document.getElementById("form");
+        const listaServidores=[ "terra.es" , "myspace.com", "arrakis.es", "tuenti.es"];
+           
+        function validacionEmailYServidor(evento){
+            evento.preventDefault();
+            const email = document.getElementById("email").value;
+            let error = document.getElementById("error");
+            let pattern =  /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            error.textContent = "";
+
+            if(!pattern.test(email)){
+                error.textContent = "Correo no válido";
+                return;
+            };
+
+            let servidor = email.split("@")[1];
+            if (listaServidores.includes(servidor)){
+                return;
+            }
+            else{
+                error.textContent = "Servidor no válido";
+                return;
+            }
+        }
+        form.addEventListener("submit", validacionEmailYServidor);
+    </script>
+
+</body>
+</html>

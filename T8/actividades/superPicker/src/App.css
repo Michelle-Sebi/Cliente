@@ -1,0 +1,18 @@
+.squares {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;  
+  min-height: 200px; 
+  }
+  .square {
+    width: 100px; 
+    height: 100px;
+  }
+
+  body{
+    width: 1000px;
+    margin: auto;
+    text-align: center;
+  }

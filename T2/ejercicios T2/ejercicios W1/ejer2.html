@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="1">PÁRRAFO 1</p>
+    <p id="2">PÁRRAFO 2</p>
+    <p id="3">PÁRRAFO 3</p>
+    <p id="4">PÁRRAFO 4</p>
+    <p id="5">PÁRRAFO 5</p>
+    <p id="6">PÁRRAFO 6</p>
+    <p id="7">PÁRRAFO 7</p>
+    <p id="8">PÁRRAFO 8</p>
+    <p id="9">PÁRRAFO 9</p>
+    <p id="10">PÁRRAFO 10</p>
+
+    <input type="button" value="Reaparecer" id="boton" onclick="mostrar()">
+    
+   <script>
+        const parrafos = document.querySelectorAll("p");
+        const boton = document.getElementById("boton");
+
+
+        parrafos.forEach(function(p){
+            p.addEventListener("contextmenu", function(evento){
+                evento.preventDefault();
+                p.parentNode.removeChild(p);
+            });
+
+            p.addEventListener("click", function(e){
+                p.style.display ="none";
+            })
+        });
+        
+        boton.addEventListener("click",function(){
+            parrafos.forEach(function(p){
+                p.style.display = "block";
+            });
+        });
+        
+    </script>
+</body>
+</html>

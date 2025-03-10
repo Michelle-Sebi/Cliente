@@ -1,0 +1,83 @@
+si es un eslint.config.js, copiar y pegar
+
+y si no encuentra el eslint-plugin-react
+yarn add eslint-plugin-react --dev
+
+
+si tu proyecto no tuviera eslint instalado tendrias que hacer:  yarn add eslint
+y luego para ejecutar el eslint :    yarn eslint
+
+yarn init -y      # Crea un package.json
+yarn add eslint   # Instala ESLint
+
+En package.json añadir:
+{
+  "type": "module"
+}
+
+así
+{
+  "name": "ejercicio1",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "eslint": "^9.21.0"
+  }
+}
+
+yarn eslint .     # Corre ESLint
+
+
+
+
+si es un eslintrc.json
+yarn add eslint@8 --dev^
+
+
+
+
+
+
+
+INSTALAR
+
+yarn add eslint eslint-plugin-react eslint-plugin-react-hooks --dev
+yarn eslint --init
+(seguir instrucciones)
+
+
+
+
+
+npm uninstall eslint && npm install eslint@8 --save-
+dev
+npx eslint "src/**/*.{js,jsx,ts,tsx}"
+yarn lint
+
+
+o en yarn: 
+
+
+
+yarn remove eslint && yarn add eslint@8
+yarn dev
+yarn run eslint "src/**/*.{js,jsx,ts,tsx}"
+
+- si este da error:
+
+yarn add eslint-plugin-react --dev
+
+- si no esta en el archivo:
+eslint-plugin-react
+eslint-plugin-react-hooks
+eslint-plugin-react-refresh
+
+yarn add eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-react-refresh --dev
+
+
+yarn lint
+
+
+

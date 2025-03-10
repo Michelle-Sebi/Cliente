@@ -1,0 +1,13 @@
+REACT
+
+yarn create vite
+
+en el directorio
+yarn install
+yarn dev
+
+
+
+REDUX
+
+yarn add @reduxjs/toolkit react-redux
