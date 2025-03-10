@@ -18,7 +18,7 @@
 - className con condicion (black)
 - cambiar estilo con condicion (si es respuesta correcta y si se ha clickado)
 
-[siluetas Pokemon](EJERCICIOS/examenes/ordinaria/examen-ordinaria/juegopokemon/src)
+[siluetas Pokemon](EJERCICIOS/examenes/ordinaria/juegopokemon/src)
 
 
 ### EXTRAORDINARIA *(ceedGPT)*
