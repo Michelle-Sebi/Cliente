@@ -44,7 +44,63 @@
 [superPicker](EJERCICIOS/ejerciciosRedux/ceed/sincrono/superPicker/src/)
 
 <u>**SUPERPICKER**</u> *(Redux)* : pasar valor input a numerico
-[superPicker](EJERCICIOS/ejerciciosRedux/ceed/sincrono/superPickerRedux/src) 
+[superPickerRedux](EJERCICIOS/ejerciciosRedux/ceed/sincrono/superPickerRedux/src) 
 
-<u>**EXTRACUADRADOS**</u> *(Redux)* : SWITCH EN REDUCER
-[superPicker](EJERCICIOS/ejerciciosRedux/ceed/sincrono/ejerExtraCuadrados/extraCuadradosRedux/src) 
+<u>**EXTRACUADRADOS**</u> *(Redux)* : Switch en reducer
+[Cuadrados](EJERCICIOS/ejerciciosRedux/ceed/sincrono/ejerExtraCuadrados/extraCuadradosRedux/src) 
+
+
+### CEED ASINCRONO
+
+<u>**CONTADOR**</u> *(Multiplicar/dividir..)* : 
+- loading 
+- async con parametros
+  
+[Contador](EJERCICIOS/ejerciciosRedux/ceed/asincrono/Contador/src) 
+
+### NO CEED SINCRONO
+
+<u>**ToDo**</u> *(Lista con boton añadir tarea)* : tachar cuando completada
+[Lista](EJERCICIOS/ejerciciosRedux/noCeed/sincrono/todo) 
+
+<u>**CONTADOR**</u> *(aumentar/disminuir)* 
+[Contador](EJERCICIOS/ejerciciosRedux/noCeed/sincrono/contador/src) 
+
+### NO CEED ASINCRONO
+
+<u>**ETT**</u> *(Personas, guardar en lista o eliminar)* : 
+- estado idle 
+- 2 slices
+  
+[ETT](EJERCICIOS/ejerciciosRedux/noCeed/asincrono/ett/src) 
+
+<u>**LISTA USUARIOS**</u> *(personas de una API)* 
+- obtener 5 de 10
+- actualizar lista
+- usuario detalle
+- async con try/catch
+  
+[listaUsuarios](EJERCICIOS/ejerciciosRedux/noCeed/asincrono/listausuarios/src) 
+
+
+## Otros ejercicios
+
+### APIS
+
+### BASICOS
+
+[Maps](EJERCICIOS/otrosEjercicios/basicos/maps.js)
+
+[Filter](EJERCICIOS/otrosEjercicios/basicos/filter.js)
+
+[Mix](EJERCICIOS/otrosEjercicios/basicos/mix.js)
+
+
+### REACT
+
+
+[Reyes](EJERCICIOS/otrosEjercicios/React/reyes/src/)
+
+[ToDo](EJERCICIOS/otrosEjercicios/React/toDo/src/)
+
+[3botones](EJERCICIOS/otrosEjercicios/React/tresBotones/)
