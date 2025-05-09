@@ -5,7 +5,7 @@ yarn add @reduxjs/toolkit react-redux
 
 2.CREAR SLICE
 
-Crea un archivo llamado colorSlice.js en una carpeta llamada features en src:
+Crea un archivo llamado colorSlice.js en una carpeta llamada redux en src:
 
 import { createSlice } from '@reduxjs/toolkit';
 
@@ -20,8 +20,8 @@ const colorSlice = createSlice({
   initialState,
   reducers: {
     setHue:(state,action)=>{
-            state.hue = action.payload;
-        }
+        state.hue = action.payload;
+    }
   }
 })
 
@@ -34,7 +34,7 @@ export default colorSlice.reducer;
 en src
 
 import { configureStore } from '@reduxjs/toolkit';
-import colorReducer from './features/colorSlice';
+import colorReducer from './colorSlice';
 
 export const store = configureStore({
   reducer: {
@@ -50,7 +50,7 @@ En tu archivo main.jsx o index.js, envuelve tu aplicación con el Provider de Re
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import { store } from './store';
+import { store } from './redux/store';
 import { Provider } from 'react-redux';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
