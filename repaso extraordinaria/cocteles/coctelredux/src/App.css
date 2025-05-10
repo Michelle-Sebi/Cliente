@@ -1,0 +1,103 @@
+body {
+  background-color: PapayaWhip;
+}
+#app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 14px "Century Gothic", Futura, sans-serif;
+}
+
+.app {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 800px;
+  margin-top: 50px;
+}
+
+.app .form-container {
+  border: 1px solid #eee;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.cocktail-list > ul {
+  list-style-type: none
+}
+
+.cocktail-list > ul > li {
+  border: 1px solid #eee;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cocktail-list img {
+  width: 200px;
+}
+
+.cocktail h3 {
+  grid-area: title;
+}
+
+.cocktail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "title title"
+    ". .";
+}
+
+.cocktail .image-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.tema-claro {
+  background-color: #fff;
+}
+
+.tema-oscuro {
+  background-color: darkgray;
+}
+
+.theme-selector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 1px solid #eee;
+  margin: 10px;
+}
+
+.theme-selector label {
+  margin-right: 20px;
+}
+
+.form-container input {
+  border: 1px solid #eee;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.form-container button {
+  border: 1px solid #eee;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #fff;
+}
