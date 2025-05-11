@@ -2,7 +2,7 @@
 
 *ASINCRONO*
 
-[COCTELES](repaso%20extraordinaria/cocteles/ejercicio2/cocktail)
+[COCTELES](cocteles/ejercicio2/cocktail)
 - Llamada API ficticia, useEffect
 - map. dentro de map.
 - Radio button
