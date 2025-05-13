@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablero de Monitoreo de Clima</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="root">
+        <div class="container">
+            <h1>Monitoreo de Clima</h1>
+
+            <input type="text" id="city-input" placeholder="Ingresa una ciudad"><button id="search-btn">Buscar Clima</button><button id="save-fav-btn">Guardar Ciudad Favorita</button>
+
+            <div>
+                <label for="temp-unit">Unidad de Temperatura:</label>
+                <select id="temp-unit">
+                    <option value="metric">°C</option>
+                    <option value="imperial">°F</option>
+                </select>
+            </div>
+
+            <div id="weather-info" style="display: none;">
+                <h2>Clima Actual</h2>
+                <p id="city-name"></p>
+                <p id="temperature"></p>
+                <p id="description"></p>
+                <p id="humidity"></p>
+                <p id="wind-speed"></p>
+            </div>
+
+            <div id="forecast-info" style="display: none;">
+                <h2>Predicción</h2>
+                <ul id="forecast-list"></ul>
+            </div>
+
+            <div id="favorite-cities">
+                <h2>Ciudades Favoritas</h2>
+                <ul id="fav-cities-list"></ul>
+            </div>
+
+        </div>
+    </div>
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>

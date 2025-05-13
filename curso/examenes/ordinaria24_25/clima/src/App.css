@@ -1,0 +1,124 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+}
+
+input, select, button {
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  cursor: pointer;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  margin-left: 10px;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+#favorite-cities ul {
+  list-style: none;
+  padding: 0;
+}
+
+#favorite-cities li {
+  background-color: #f1f1f1;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+#forecast-info {
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  overflow: hidden; /* Para evitar que el contenido se desborde */
+  z-index: 1; /* Asegura que se muestre encima de otros elementos */
+}
+
+#forecast-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  overflow: auto; /* Permite que el contenido se ajuste si es necesario */
+}
+
+#forecast-list li {
+  background-color: #ffffff;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 8px;
+  width: 45%;
+  max-width: 250px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+#forecast-list li:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#forecast-list li p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+#forecast-list li span {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+#forecast-list li img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  #forecast-list li {
+      width: 100%;
+      margin-bottom: 15px;
+  }
+}
+
+#weather-info, #forecast-info {
+  margin-top: 20px;
+}
+
